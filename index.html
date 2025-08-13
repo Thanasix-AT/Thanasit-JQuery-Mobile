@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Reservation</title>
+
+<!-- jQuery Mobile CSS -->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- jQuery + jQuery Mobile JS -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!-- Custom CSS -->
+<style>
+.ui-header {
+    background: linear-gradient(#ff5722, #e64a19) !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+.ui-footer {
+    background: #333 !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+.menu-list img {
+    max-width: 80px;
+    border-radius: 8px;
+}
+.reservation-form label {
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- หน้า Home -->
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>Foodie Restaurant</h1>
+    </div>
+
+    <div data-role="content">
+        <h2>Welcome!</h2>
+        <p>Find your favorite dishes and book a table instantly.</p>
+        <a href="#menu" data-role="button" data-icon="grid">View Menu</a>
+    </div>
+
+    <div data-role="footer">
+        <h4>&copy; 2025 Foodie Restaurant</h4>
+    </div>
+</div>
+
+<!-- หน้า Menu -->
+<div data-role="page" id="menu">
+    <div data-role="header">
+        <a href="#home" data-role="button" data-icon="back">Back</a>
+        <h1>Menu</h1>
+    </div>
+
+    <div data-role="content">
+        <ul data-role="listview" class="menu-list">
+            <li>
+                <a href="#dish1">
+                    <img src="https://via.placeholder.com/80" alt="Pizza">
+                    <h2>Pizza Margherita</h2>
+                    <p>Fresh tomatoes, mozzarella, basil</p>
+                </a>
+            </li>
+            <li>
+                <a href="#dish2">
+                    <img src="https://via.placeholder.com/80" alt="Pasta">
+                    <h2>Spaghetti Carbonara</h2>
+                    <p>Bacon, eggs, parmesan cheese</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer">
+        <h4>Choose your favorite dish</h4>
+    </div>
+</div>
+
+<!-- หน้า Dish 1 -->
+<div data-role="page" id="dish1">
+    <div data-role="header">
+        <a href="#menu" data-role="button" data-icon="back">Back</a>
+        <h1>Pizza Margherita</h1>
+    </div>
+
+    <div data-role="content">
+        <img src="https://via.placeholder.com/300" alt="Pizza" style="width:100%;border-radius:10px;">
+        <p>A delicious classic pizza topped with fresh tomatoes, mozzarella, and basil leaves.</p>
+        <a href="#reservation" data-role="button" data-icon="check">Book Now</a>
+    </div>
+
+    <div data-role="footer">
+        <h4>Only $8.99</h4>
+    </div>
+</div>
+
+<!-- หน้า Dish 2 -->
+<div data-role="page" id="dish2">
+    <div data-role="header">
+        <a href="#menu" data-role="button" data-icon="back">Back</a>
+        <h1>Spaghetti Carbonara</h1>
+    </div>
+
+    <div data-role="content">
+        <img src="https://via.placeholder.com/300" alt="Pasta" style="width:100%;border-radius:10px;">
+        <p>Rich and creamy spaghetti with bacon, eggs, and parmesan cheese.</p>
+        <a href="#reservation" data-role="button" data-icon="check">Book Now</a>
+    </div>
+
+    <div data-role="footer">
+        <h4>Only $7.99</h4>
+    </div>
+</div>
+
+<!-- หน้า Reservation Form -->
+<div data-role="page" id="reservation">
+    <div data-role="header">
+        <a href="#menu" data-role="button" data-icon="back">Back</a>
+        <h1>Book a Table</h1>
+    </div>
+
+    <div data-role="content" class="reservation-form">
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="people">Number of People:</label>
+            <input type="number" name="people" id="people" min="1">
+
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date">
+
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="time">
+
+            <input type="submit" value="Confirm Booking" data-theme="b">
+        </form>
+    </div>
+
+    <div data-role="footer">
+        <h4>See you soon!</h4>
+    </div>
+</div>
+
+</body>
+</html>
